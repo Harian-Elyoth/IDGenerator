@@ -1,2 +1,3 @@
-build/
+/build/*
+!/build/data/id_save.data
 .vscode/

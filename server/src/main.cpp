@@ -1,15 +1,17 @@
 #include "TCPServer.hpp"
 
-int main()
-{
-    const int port = 12346;
-    TCPServer server(port);
+int main() {
 
-    // Start the server and accept incoming connections
-    server.start();
+  chdir("~/PROJECT/IDGenerator");
 
-    // Stop the server (cleanup)
-    server.stop();
+  const int port = 12346;
+  TCPServer server(port);
 
-    return 0;
+  // Start the server and accept incoming connections
+  server.start();
+
+  // Stop the server (cleanup)
+  server.stop();
+
+  return 0;
 }

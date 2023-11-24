@@ -5,21 +5,21 @@
 
 class TCPClient {
 public:
-    TCPClient(const std::string& serverIP, int serverPort);
-    ~TCPClient();
+  TCPClient(const std::string &serverIP, int serverPort);
+  ~TCPClient();
 
-    bool connectToServer();
-    void startReceiving();
-    void closeConnection();
+  bool connectToServer();
+  void startReceiving();
+  void closeConnection();
 
 private:
-    int clientSocket;
-    std::string serverIP;
-    int serverPort;
+  int clientSocket;
+  std::string serverIP;
+  int serverPort;
 
-    static constexpr int bufferSize = 1024;
+  static constexpr int bufferSize = 1024;
 
-    void receiveLoop();
+  void receiveLoop();
 };
 
 #endif // TCP_CLIENT_HPP
